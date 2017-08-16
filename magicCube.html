@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			background: black;
+		}
+		#btn{
+			width: 100px;
+			height: 50px;
+			font-size: 25px;
+			margin: 50px auto;
+			text-align: center;
+			color: gray;
+			border-radius: 10px;
+			line-height: 50px;
+			background-color: rgba(255,255,255,1);
+		}
+		.wutai{
+			width: 200px;
+			height: 200px;
+			margin: 100px auto;
+			perspective: 1000px;
+			-webkit-transform-origin: 50% 50%;
+			--webkit-transform-style: preserve-3d;
+		}@keyframes rotate{
+			from{-webkit-transform: rotateY(0);}
+			to{-webkit-transform: rotateY(-360deg);}
+		}
+
+		.rongqi2{
+			width: 200px;
+			height: 200px;
+			position: relative;
+			animation: rotate 8s linear infinite;
+			-webkit-transform-style: preserve-3d;
+		}
+
+		.ddd{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			background-color: rgba(255,255,255,1);
+			font-size: 150px;
+			line-height: 200px;
+			text-align: center;
+			opacity:0.3;
+			border-radius: 20px;
+			-webkit-transition: -webkit-transform 2s, opacity 2s
+		}
+		.dd1{
+			-webkit-transform:  rotateY(0) translateZ(370px);
+		}.dd2{
+			-webkit-transform:  rotateY(30deg) translateZ(370px);
+		}.dd3{
+			-webkit-transform:  rotateY(60deg) translateZ(370px);
+		}.dd4{
+			-webkit-transform:  rotateY(90deg) translateZ(370px);
+		}.dd5{
+			-webkit-transform: rotateY(120deg) translateZ(370px);
+		}.dd6{
+			-webkit-transform: rotateY(150deg) translateZ(370px);
+		}.dd7{
+			-webkit-transform: rotateY(180deg) translateZ(370px);
+		}.dd8{
+			-webkit-transform: rotateY(210deg) translateZ(370px);
+		}.dd9{
+			-webkit-transform: rotateY(240deg) translateZ(370px);
+		}.dd10{
+			-webkit-transform: rotateY(270deg) translateZ(370px);
+		}.dd11{
+			-webkit-transform: rotateY(300deg) translateZ(370px);
+		}.dd12{
+			-webkit-transform: rotateY(330deg) translateZ(370px);
+		}
+		.d1{
+			-webkit-transform:  translateZ(120px) scale3d(1.2,1.2,1.2);
+		}.d2{
+			-webkit-transform:  rotateY(90deg) translateZ(120px) scale3d(1.2,1.2,1.2);
+		}.d3{
+			-webkit-transform:  rotateY(180deg) translateZ(120px) scale3d(1.2,1.2,1.2);
+		}.d4{
+			-webkit-transform:  rotateY(270deg) translateZ(120px) scale3d(1.2,1.2,1.2);
+		}.d5{
+			-webkit-transform:  rotateX(90deg) translateZ(120px) scale3d(1.2,1.2,1.2);
+		}.d6{
+			-webkit-transform:  rotateX(-90deg) translateZ(120px) scale3d(1.2,1.2,1.2);
+		}.d7{
+			-webkit-transform:  translateZ(80px) scale3d(0.8,0.8,0.8);
+		}.d8{
+			-webkit-transform: 	rotateY(90deg) translateZ(80px) scale3d(0.8,0.8,0.8);
+		}.d9{
+			-webkit-transform:  rotateY(180deg)	translateZ(80px) scale3d(0.8,0.8,0.8);
+		}.d10{
+			-webkit-transform:  rotateY(270deg)	translateZ(80px) scale3d(0.8,0.8,0.8);
+		}.d11{
+			-webkit-transform:  rotateX(90deg)	translateZ(80px) scale3d(0.8,0.8,0.8);
+		}.d12{
+			-webkit-transform:  rotateX(-90deg)	translateZ(80px) scale3d(0.8,0.8,0.8);
+		}
+	</style>
+</head>
+<body>
+
+	<div  id="btn">变形</div>
+	<div class="wutai">
+		<!-- <div class="rongqi">
+			<div class="dd" id="d1">1</div>
+			<div class="dd" id="d2">2</div>
+			<div class="dd" id="d3">3</div>
+			<div class="dd" id="d4">4</div>
+			<div class="dd" id="d5">5</div>
+			<div class="dd" id="d6">6</div>
+		</div> -->
+		<div class="rongqi2" style="margin-top: 300px">
+			<div class="ddd d1 dd1" id="dd1">1</div>
+			<div class="ddd d2 dd2" id="dd2">2</div>
+			<div class="ddd d3 dd3" id="dd3">3</div>
+			<div class="ddd d4 dd4" id="dd4">4</div>
+			<div class="ddd d5 dd5" id="dd5">5</div>
+			<div class="ddd d6 dd6" id="dd6">6</div>
+			<div class="ddd d7 dd7" id="dd7">7</div>
+			<div class="ddd d8 dd8" id="dd8">8</div>
+			<div class="ddd d9 dd9" id="dd9">9</div>
+			<div class="ddd d10 dd10" id="dd10">10</div>
+			<div class="ddd d11 dd11" id="dd11">11</div>
+			<div class="ddd d12 dd12" id="dd12">12</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="jquery-1.11.2.js"></script>
+	<script type="text/javascript">
+		document.getElementById('btn').onclick=function(event) {
+			$("#dd1").toggleClass("d1");
+			$("#dd2").toggleClass("d2");
+			$("#dd3").toggleClass("d3");
+			$("#dd4").toggleClass("d4");
+			$("#dd5").toggleClass("d5");
+			$("#dd6").toggleClass("d6");
+			$("#dd7").toggleClass("d7");
+			$("#dd8").toggleClass("d8");
+			$("#dd9").toggleClass("d9");
+			$("#dd10").toggleClass("d10");
+			$("#dd11").toggleClass("d11");
+			$("#dd12").toggleClass("d12");
+		};
+	</script>
+</body>
+</html>
